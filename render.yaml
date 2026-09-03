@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: swiftlink-frontend
+    runtime: static
+    buildCommand: echo "Static site ready"
+    staticPublishPath: ./frontend
+    envVars:
+      - key: API_URL
+        value: https://swiftlink-backend.onrender.com
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://swiftlink-backend.onrender.com/api/*
+
+  - type: web
+    name: swiftlink-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: COMPANY_EMAIL
+        value: info@kenyatransport.co.ke
+      - key: COMPANY_PHONE
+        value: +254712345678
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: WHATSAPP_SERVICE_URL
+        value: https://swiftlink-whatsapp.onrender.com
+
+  - type: web
+    name: swiftlink-whatsapp
+    runtime: docker
+    dockerfilePath: ./whatsapp-service/Dockerfile
+    dockerContext: ./whatsapp-service
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+    disk:
+      name: whatsapp-auth
+      mountPath: /app/.wwebjs_auth
+      sizeGB: 1

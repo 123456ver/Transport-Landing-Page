@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftLink Kenya | Transport, Construction & Exhauster Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-truck-moving"></i>
+                <span>SwiftLink<span class="highlight">Kenya</span></span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#coverage" class="nav-link">Coverage</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 id="heroTitle" class="hero-title">Reliable Transport & Construction Solutions Across Kenya</h1>
+                <p id="heroSubtitle" class="hero-subtitle">Connecting Mombasa to Garissa, Kisumu to Nairobi. Professional transport services, quality building blocks, and expert exhauster services.</p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/254712345678?text=Hello%20SwiftLink%20Kenya" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-number">22+</span><span class="stat-label">Towns Covered</span></div>
+                    <div class="stat"><span class="stat-number">24/7</span><span class="stat-label">Service Available</span></div>
+                    <div class="stat"><span class="stat-number">100%</span><span class="stat-label">Reliable</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-desc">Comprehensive solutions for transport, construction, and sanitation needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="transport">
+                    <div class="service-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Transport Services</h3>
+                    <p>Full truckload and parcel delivery across all major Kenyan towns. Fast, secure, and affordable logistics solutions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Same-day dispatch</li>
+                        <li><i class="fas fa-check"></i> Goods insurance</li>
+                        <li><i class="fas fa-check"></i> Real-time tracking</li>
+                        <li><i class="fas fa-check"></i> 22+ destinations</li>
+                    </ul>
+                    <button class="btn btn-service" onclick="selectService('transport')">Book Transport</button>
+                </div>
+                <div class="service-card featured" data-service="blocks">
+                    <div class="service-badge">Popular</div>
+                    <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Building & Construction Blocks</h3>
+                    <p>High-quality concrete blocks delivered directly to your construction site. Durable, uniform, and certified.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Machine-pressed blocks</li>
+                        <li><i class="fas fa-check"></i> Bulk orders accepted</li>
+                        <li><i class="fas fa-check"></i> Site delivery included</li>
+                        <li><i class="fas fa-check"></i> Western Kenya coverage</li>
+                    </ul>
+                    <button class="btn btn-service" onclick="selectService('blocks')">Order Blocks</button>
+                </div>
+                <div class="service-card" data-service="exhauster">
+                    <div class="service-icon"><i class="fas fa-pump-soap"></i></div>
+                    <h3>Exhauster Services</h3>
+                    <p>Professional septic tank emptying and drainage cleaning. Available in Kisii, Nyamira, and Migori counties.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Modern exhauster trucks</li>
+                        <li><i class="fas fa-check"></i> Emergency response</li>
+                        <li><i class="fas fa-check"></i> Licensed disposal</li>
+                        <li><i class="fas fa-check"></i> 3-county coverage</li>
+                    </ul>
+                    <button class="btn btn-service" onclick="selectService('exhauster')">Book Exhauster</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coverage" class="coverage">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Reach</span>
+                <h2 class="section-title">Coverage Areas</h2>
+                <p class="section-desc">We operate across Kenya, ensuring your goods and services reach every corner</p>
+            </div>
+            <div class="coverage-tabs">
+                <button class="tab-btn active" data-tab="transport">Transport Routes</button>
+                <button class="tab-btn" data-tab="blocks">Block Delivery</button>
+                <button class="tab-btn" data-tab="exhauster">Exhauster Zone</button>
+            </div>
+            <div class="tab-content active" id="transport-tab">
+                <div class="coverage-grid">
+                    <div class="region">
+                        <h4><i class="fas fa-map-marker-alt"></i> Coast Region</h4>
+                        <div class="towns">
+                            <span class="town">Mombasa</span><span class="town">Malindi</span><span class="town">Kilifi</span><span class="town">Voi</span>
+                        </div>
+                    </div>
+                    <div class="region">
+                        <h4><i class="fas fa-map-marker-alt"></i> Central & Rift</h4>
+                        <div class="towns">
+                            <span class="town">Nairobi</span><span class="town">Nakuru</span><span class="town">Narok</span><span class="town">Bomet</span><span class="town">Eldoret</span><span class="town">Kitale</span>
+                        </div>
+                    </div>
+                    <div class="region">
+                        <h4><i class="fas fa-map-marker-alt"></i> Western & Nyanza</h4>
+                        <div class="towns">
+                            <span class="town">Nyamira</span><span class="town">Kisii</span><span class="town">Rongo</span><span class="town">Homa Bay</span><span class="town">Migori</span><span class="town">Sirare</span><span class="town">Kisumu</span><span class="town">Siaya</span><span class="town">Busia</span><span class="town">Bungoma</span>
+                        </div>
+                    </div>
+                    <div class="region">
+                        <h4><i class="fas fa-map-marker-alt"></i> Northern & Eastern</h4>
+                        <div class="towns">
+                            <span class="town">Lodwar</span><span class="town">Garissa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="blocks-tab">
+                <div class="coverage-grid single">
+                    <div class="region highlight-region">
+                        <h4><i class="fas fa-truck-loading"></i> Block Delivery Zone</h4>
+                        <div class="towns">
+                            <span class="town">Kisii</span><span class="town">Nyamira</span><span class="town">Migori</span><span class="town">Sirare</span><span class="town">Homa Bay</span><span class="town">Kisumu</span>
+                        </div>
+                        <p class="delivery-note">Free delivery for orders above 1000 blocks. Contact us for pricing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="exhauster-tab">
+                <div class="coverage-grid single">
+                    <div class="region highlight-region">
+                        <h4><i class="fas fa-pump-soap"></i> Exhauster Service Area</h4>
+                        <div class="towns">
+                            <span class="town">Kisii</span><span class="town">Nyamira</span><span class="town">Migori</span>
+                        </div>
+                        <p class="delivery-note">Emergency exhauster services available 24/7. Response time under 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Request a Quote</h2>
+                    <p>Fill out the form and we'll get back to you within minutes. Or reach us directly via WhatsApp or email.</p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/254712345678?text=Hello%20SwiftLink%20Kenya" target="_blank" class="contact-method whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <div><span>WhatsApp Business</span><strong>+254 712 345 678</strong></div>
+                        </a>
+                        <a href="mailto:info@kenyatransport.co.ke" class="contact-method email">
+                            <i class="fas fa-envelope"></i>
+                            <div><span>Email Us</span><strong>info@kenyatransport.co.ke</strong></div>
+                        </a>
+                        <div class="contact-method location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><span>Head Office</span><strong>Nairobi, Kenya</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+254 712 345 678">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Service Required *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="Transport Services">Transport Services</option>
+                                    <option value="Building Blocks">Building & Construction Blocks</option>
+                                    <option value="Exhauster Services">Exhauster Services</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location/Town *</label>
+                                <select id="location" name="location" required>
+                                    <option value="">Select town...</option>
+                                    <optgroup label="Coast"><option>Mombasa</option><option>Malindi</option><option>Kilifi</option><option>Voi</option></optgroup>
+                                    <optgroup label="Central & Rift"><option>Nairobi</option><option>Nakuru</option><option>Narok</option><option>Bomet</option><option>Eldoret</option><option>Bungoma</option><option>Kitale</option></optgroup>
+                                    <optgroup label="Western & Nyanza"><option>Kisii</option><option>Nyamira</option><option>Rongo</option><option>Homa Bay</option><option>Migori</option><option>Sirare</option><option>Kisumu</option><option>Siaya</option><option>Busia</option></optgroup>
+                                    <optgroup label="Northern"><option>Lodwar</option><option>Garissa</option></optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Contact Method</label>
+                            <div class="radio-group">
+                                <label class="radio-label"><input type="radio" name="contactMethod" value="email" checked><span><i class="fas fa-envelope"></i> Email</span></label>
+                                <label class="radio-label"><input type="radio" name="contactMethod" value="whatsapp"><span><i class="fab fa-whatsapp"></i> WhatsApp</span></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Details *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Describe your requirements (cargo type, quantity, delivery timeline...)"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand"><i class="fas fa-truck-moving"></i><span>SwiftLink<span class="highlight">Kenya</span></span></div>
+                    <p>Your trusted partner for transport, construction materials, and sanitation services across Kenya.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul><li><a href="#services">Transport</a></li><li><a href="#services">Building Blocks</a></li><li><a href="#services">Exhauster</a></li><li><a href="#contact">Get Quote</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Locations</h4>
+                    <ul><li><a href="#">Nairobi</a></li><li><a href="#">Mombasa</a></li><li><a href="#">Kisumu</a></li><li><a href="#">Kisii</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul><li><i class="fas fa-phone"></i> +254 712 345 678</li><li><i class="fas fa-envelope"></i> info@kenyatransport.co.ke</li><li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li></ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 SwiftLink Kenya. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/app.js?v=2"></script>
+</body>
+</html>

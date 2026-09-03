@@ -1,0 +1,45 @@
+services:
+  frontend:
+    image: nginx:alpine
+    container_name: transport-frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - backend
+    networks:
+      - transport-net
+
+  backend:
+    build: ./backend
+    container_name: transport-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - SMTP_HOST=mailhog
+      - SMTP_PORT=1025
+      - COMPANY_EMAIL=info@kenyatransport.co.ke
+      - COMPANY_PHONE=+254712345678
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    depends_on:
+      - mailhog
+    networks:
+      - transport-net
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: transport-mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - transport-net
+
+networks:
+  transport-net:
+    driver: bridge

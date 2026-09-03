@@ -1,0 +1,53 @@
+{
+  "company": {
+    "name": "SwiftLink",
+    "suffix": "Kenya",
+    "phone": "+254 712 345 678",
+    "email": "info@kenyatransport.co.ke",
+    "address": "Nairobi, Kenya"
+  },
+  "hero": {
+    "title": "Awesome Transport & Construction Solutions Across Kenya",
+    "subtitle": "Connecting Mombasa to Garissa, Kisumu to Nairobi. Professional logistics, quality building blocks, and expert exhauster services."
+  },
+  "services": [
+    {
+      "title": "Transport Services",
+      "description": "Full truckload and parcel delivery across all major Kenyan towns. Fast, secure, and affordable logistics solutions.",
+      "features": [
+        "Same-day dispatch",
+        "Goods insurance",
+        "Real-time tracking",
+        "22+ destinations"
+      ]
+    },
+    {
+      "title": "Building & Construction Blocks",
+      "description": "High-quality concrete blocks delivered directly to your construction site. Durable, uniform, and certified.",
+      "features": [
+        "Machine-pressed blocks",
+        "Bulk orders accepted",
+        "Site delivery included",
+        "Western Kenya coverage"
+      ]
+    },
+    {
+      "title": "Exhauster Services",
+      "description": "Professional septic tank emptying and drainage cleaning. Available in Kisii, Nyamira, and Migori counties.",
+      "features": [
+        "Modern exhauster trucks",
+        "Emergency response",
+        "Licensed disposal",
+        "3-county coverage"
+      ]
+    }
+  ],
+  "coverage": {
+    "transportNote": "We operate across Kenya, ensuring your goods and services reach every corner",
+    "blocksNote": "Free delivery for orders above 1000 blocks. Contact us for pricing.",
+    "exhausterNote": "Emergency exhauster services available 24/7. Response time under 2 hours."
+  },
+  "footer": {
+    "tagline": "Your trusted partner for transport, construction materials, and sanitation services across Kenya."
+  }
+}
